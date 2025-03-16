@@ -2,13 +2,25 @@
 @theme{
     --color-backgroundHome:rgba(22,36,86,.233);
 }
-ul .active{
-    transform: scaleX(1);
+@media (min-width:640px) {
+    ul .active{
+        transform: scaleX(1);
+    }
+    ul li:not(:nth-of-type(1)) div{
+        transform: scaleX(0);
+        transition: transform .15s;
+    }
+    ul li:hover div{
+        transform: scaleX(1);
+    }
 }
-ul li:not(:nth-of-type(1)) div{
-    transform: scaleX(0);
-    transition: transform .2s;
-}
-ul li:hover div{
-    transform: scaleX(1);
+@media (max-width:640px) {
+    ul li div{
+        transform: scaleX(0);
+        transition: transform .2s;
+    }
+    #Modal{
+        transition: transform 1s;
+        transform: translateX(100%) ;
+    }
 }

@@ -20,7 +20,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body
-    class="relative z-10 h-dvh max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover"
+    class="relative overflow-x-hidden z-10 h-full w-dvw max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover"
   >
     <main>
       <!-- desktop header -->
@@ -123,12 +123,18 @@
         class="sm:hidden text-white flex justify-between items-center px-4 py-6"
       >
         <img src="/assets/shared/logo.svg" alt="" />
-        <img
-          src="/assets/shared/icon-hamburger.svg"
-          width="50"
-          class="p-2"
-          alt=""
-        />
+        <button
+          type="button"
+          class="cursor-pointer"
+          onclick="ShowModal('Modal')"
+        >
+          <img
+            src="/assets/shared/icon-hamburger.svg"
+            width="50"
+            class="p-2"
+            alt=""
+          />
+        </button>
       </header>
       <!-- Start mobile screen -->
       <div id="main-content" class="p-6 sm:hidden">
@@ -166,6 +172,61 @@
             </button>
           </div>
         </div>
+        <div
+          id="Modal"
+          style="font-family: 'Barlow Condensed', sans-serif"
+          class="absolute z-40 p-8 flex flex-col items-end space-y-12 backdrop:fill-[#0B0D17] backdrop-blur-[20px] w-[270px] h-full top-0 right-0"
+        >
+          <button
+            type="button"
+            class="cursor-pointer"
+            onclick="HidModal('Modal')"
+          >
+            <img
+              src="./public/assets/shared/icon-close.svg"
+              width="25"
+              alt=""
+            />
+          </button>
+          <ul class="text-white font-thin tracking-wide space-y-3 w-full">
+            <li class="active relative">
+              <a href="/index.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="relative font-semibold">00</span> Home
+              </a>
+            </li>
+            <li class="relative">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">01</span> Destination
+              </a>
+            </li>
+            <li class="relative">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">02</span> Crew
+              </a>
+            </li>
+            <li class="relative">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          id="overlay"
+          class="absolute z-20 bg-backgroundHome w-full h-full top-0 left-0 hidden"
+        ></div>
       </div>
       <!-- End mobile screen -->
       <!-- Start Table screen -->
