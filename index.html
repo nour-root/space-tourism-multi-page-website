@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/shared/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body
+    class="relative z-10 h-dvh max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover"
+  >
+    <main>
+      <!-- desktop header -->
+      <header
+        class="max-lg:hidden relative text-white flex items-center justify-between pl-16 py-6"
+      >
+        <img src="/assets/shared/logo.svg" alt="" />
+        <div
+          class="fixed z-20 h-[.5px] max-w-[470px] min-w-[430px] xl:max-w-[650px] bg-[#474b5f] right-[51%] left-[15%] pl-5"
+        ></div>
+        <nav
+          style="font-family: 'Barlow Condensed', sans-serif"
+          class="bg-backgroundHome backdrop-blur-[10px] backdrop-filter-[10px] px-20 max-w-[55%] grow"
+        >
+          <ul
+            class="flex items-center space-x-16 font-thin tracking-wider uppercase"
+          >
+            <li class="active relative py-6">
+              <a href="/index.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="relative font-semibold">00</span> Home
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">01</span> Destination
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">02</span> Crew
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- table header -->
+      <header
+        class="lg:hidden max-sm:hidden text-white flex items-center justify-between pl-6"
+      >
+        <img src="/assets/shared/logo.svg" alt="" />
+        <nav
+          style="font-family: 'Barlow Condensed', sans-serif"
+          class="px-10 bg-backgroundHome backdrop-blur-[5px] backdrop-filter-[5px] pl-20"
+        >
+          <ul class="flex justify-end space-x-10 font-thin">
+            <li class="active relative py-6">
+              <a href="/index.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                Home
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">01</span> Destination
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">02</span> Crew
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- mobile header -->
+      <header
+        class="sm:hidden text-white flex justify-between items-center px-4 py-6"
+      >
+        <img src="/assets/shared/logo.svg" alt="" />
+        <img
+          src="/assets/shared/icon-hamburger.svg"
+          width="50"
+          class="p-2"
+          alt=""
+        />
+      </header>
+      <!-- Start mobile screen -->
+      <div id="main-content" class="p-6 sm:hidden">
+        <div id="Hero" class="flex flex-col items-center">
+          <div id="Texts" class="text-white text-center space-y-6">
+            <span
+              style="font-family: 'Barlow Condensed', sans-serif"
+              class="block text-lg font-thin uppercase text-blue-100 tracking-widest"
+            >
+              So, you want to travel to</span
+            >
+            <h1
+              class="uppercase text-8xl"
+              style="font-family: 'Bellefair', serif"
+            >
+              Space
+            </h1>
+            <p
+              style="font-family: 'Barlow Condensed', sans-serif"
+              class="leading-10 tracking-wide text-blue-100"
+            >
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </p>
+          </div>
+          <div class="mt-[120px]">
+            <button
+              id="btn"
+              style="font-family: 'Bellefair', serif"
+              class="uppercase animate-pulse bg-white text-blue-950 rounded-full w-[144px] h-[144px]"
+            >
+              explore
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End mobile screen -->
+      <!-- Start Table screen -->
+      <div id="main-content" class="p-6 max-sm:hidden lg:hidden">
+        <div id="Hero" class="flex flex-col items-center p-10">
+          <div id="Texts" class="text-white text-center space-y-6">
+            <span
+              style="font-family: 'Barlow Condensed', sans-serif"
+              class="block text-lg font-thin uppercase text-blue-100 tracking-widest"
+            >
+              So, you want to travel to</span
+            >
+            <h1
+              class="uppercase text-8xl"
+              style="font-family: 'Bellefair', serif"
+            >
+              Space
+            </h1>
+            <p
+              style="font-family: 'Barlow Condensed', sans-serif"
+              class="leading-10 tracking-wide text-blue-100"
+            >
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </p>
+          </div>
+          <div class="mt-[120px]">
+            <button
+              id="btn"
+              style="font-family: 'Bellefair', serif"
+              class="uppercase bg-white animate-pulse text-blue-950 rounded-full w-[144px] h-[144px]"
+            >
+              explore
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Table screen -->
+      <!-- Start desktop screen -->
+      <div id="main-content" class="p-6 max-lg:hidden mt-5">
+        <div id="Hero" class="flex items-end p-10 justify-around">
+          <div id="Texts" class="text-white text-left space-y-6">
+            <span
+              style="font-family: 'Barlow Condensed', sans-serif"
+              class="block text-lg font-thin uppercase text-blue-100 tracking-widest"
+            >
+              So, you want to travel to</span
+            >
+            <h1
+              class="uppercase text-8xl"
+              style="font-family: 'Bellefair', serif"
+            >
+              Space
+            </h1>
+            <p
+              style="font-family: 'Barlow Condensed', sans-serif"
+              class="leading-10 tracking-wide text-blue-100 w-[400px]"
+            >
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </p>
+          </div>
+          <div class="mt-[120px]">
+            <button
+              id="btn"
+              style="font-family: 'Bellefair', serif"
+              class="uppercase animate-pulse bg-white text-2xl text-blue-950 rounded-full w-[200px] h-[200px]"
+            >
+              explore
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End desktop screen -->
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
