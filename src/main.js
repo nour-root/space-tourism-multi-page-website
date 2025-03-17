@@ -19,6 +19,5 @@ let HidModal = (id) => {
   });
   document.getElementById(id).classList.add("hidden");
 };
-
 window.ShowModal = ShowModal;
 window.HidModal = HidModal;
