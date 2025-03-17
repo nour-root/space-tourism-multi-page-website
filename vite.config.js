@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        destination: "destination.html",
+        destination: "/destination.html",
+        cew: "/crew.html",
       },
     },
   },
