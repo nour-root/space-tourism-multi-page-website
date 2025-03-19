@@ -20,7 +20,7 @@
     <title>Destination</title>
   </head>
   <body
-    class="relative overflow-x-hidden z-10 h-dvh w-dvw max-sm:bg-[url('/assets/destination/background-destination-mobile.jpg')] sm:bg-[url('/assets/destination/background-destination-tablet.jpg')] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')] bg-no-repeat bg-cover"
+    class="relative max-sm:overflow-x-hidden z-10 h-dvh w-vw max-sm:bg-[url('/assets/destination/background-destination-mobile.jpg')] sm:bg-[url('/assets/destination/background-destination-tablet.jpg')] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')] bg-no-repeat bg-cover"
   >
     <main>
       <!-- desktop header -->
@@ -75,14 +75,14 @@
       </header>
       <!-- table header -->
       <header
-        class="lg:hidden max-sm:hidden text-white flex items-center justify-between pl-6"
+        class="lg:hidden max-sm:hidden text-white flex items-center space-x-6 justify-between pl-6"
       >
         <img src="/assets/shared/logo.svg" alt="" />
         <nav
           style="font-family: 'Barlow Condensed', sans-serif"
-          class="px-10 bg-backgroundNav backdrop-blur-[15px] backdrop-filter-[5px] pl-20"
+          class="px-10 bg-backgroundNav backdrop-blur-[15px] backdrop-filter-[5px] grow"
         >
-          <ul class="flex justify-end space-x-10 font-thin">
+          <ul class="flex justify-around uppercase font-thin">
             <li class="relative py-6">
               <a href="/index.html">
                 <div

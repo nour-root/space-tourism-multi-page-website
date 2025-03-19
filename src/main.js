@@ -6,7 +6,7 @@ let ShowModal = (id) => {
   document.getElementById(id).style.transition = "none";
   requestAnimationFrame(function () {
     document.getElementById(id).style.transition = "all .3s ease";
-    document.getElementById(id).style.left = "41%";
+    document.getElementById(id).style.left = "47%";
   });
   document.getElementById(id).style.pointerEvents = "auto";
 };
