@@ -20,7 +20,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body
-    class="relative max-sm:overflow-x-hidden z-10 h-full w-vw max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover"
+    class="relative max-sm:overflow-x-hidden z-10 h-dvh w-dvw max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat bg-cover"
   >
     <main>
       <!-- desktop header -->
@@ -175,7 +175,7 @@
         <div
           id="Modal"
           style="font-family: 'Barlow Condensed', sans-serif"
-          class="absolute z-40 p-8 transform flex flex-col items-end space-y-12 backdrop:fill-backgroundNav backdrop-blur-[20px] w-[270px] h-full top-0 left-[100%]"
+          class="absolute z-40 p-8 transform flex flex-col items-end space-y-12 backdrop:fill-backgroundNav backdrop-blur-[20px] w-[270px] h-full top-0 -right-1/1"
         >
           <button
             type="button"
@@ -255,11 +255,14 @@
               this world experience!
             </p>
           </div>
-          <div class="mt-[120px]">
+          <div class="mt-[120px] relative group">
+            <div
+              class="absolute z-10 w-full h-full left-0 top-0 transform scale-0 group-hover:scale-150 bg-white/50 rounded-full transition-all duration-300"
+            ></div>
             <button
               id="btn"
               style="font-family: 'Bellefair', serif"
-              class="uppercase bg-white animate-pulse text-blue-950 rounded-full w-[144px] h-[144px]"
+              class="uppercase relative z-20 cursor-pointer transition-all duration-300 group-hover:shadow-2xl bg-white text-2xl text-blue-950 rounded-full w-[200px] h-[200px]"
             >
               explore
             </button>
@@ -293,11 +296,14 @@
               this world experience!
             </p>
           </div>
-          <div class="mt-[120px]">
+          <div class="mt-[120px] relative group">
+            <div
+              class="absolute z-10 w-full h-full left-0 top-0 transform scale-0 group-hover:scale-150 bg-white/50 rounded-full transition-all duration-300"
+            ></div>
             <button
               id="btn"
               style="font-family: 'Bellefair', serif"
-              class="uppercase animate-pulse bg-white text-2xl text-blue-950 rounded-full w-[200px] h-[200px]"
+              class="uppercase relative z-20 cursor-pointer transition-all duration-300 group-hover:shadow-2xl bg-white text-2xl text-blue-950 rounded-full w-[200px] h-[200px]"
             >
               explore
             </button>
