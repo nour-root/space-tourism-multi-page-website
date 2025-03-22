@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/shared/logo.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <title>Technology</title>
+  </head>
+  <body
+    class="relative z-10 h-vh w-vw max-sm:bg-[url('/assets/technology/background-technology-mobile.jpg')] sm:bg-[url('/public/assets/technology/background-technology-tablet.jpg')] lg:bg-[url('/assets/technology/background-technology-desktop.jpg')] bg-no-repeat bg-cover"
+  >
+    <main>
+      <!-- desktop header -->
+      <header
+        class="max-lg:hidden relative text-white flex items-center justify-between pl-16 py-6"
+      >
+        <img src="/assets/shared/logo.svg" alt="" />
+        <div
+          class="absolute z-20 h-[.5px] max-w-[470px] min-w-[430px] xl:max-w-[650px] bg-[#474b5f] right-[51%] left-[15%] pl-5"
+        ></div>
+        <nav
+          style="font-family: 'Barlow Condensed', sans-serif"
+          class="bg-backgroundNav backdrop-blur-[15px] backdrop-filter-[5px] px-20 max-w-[55%] grow"
+        >
+          <ul
+            class="flex items-center space-x-16 font-thin tracking-wider uppercase"
+          >
+            <li class="relative py-6">
+              <a href="/index.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="relative font-semibold">00</span> Home
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="destination.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">01</span> Destination
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="crew.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">02</span> Crew
+              </a>
+            </li>
+            <li id="active" class="relative py-6">
+              <a href="technology.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- table header -->
+      <header
+        class="lg:hidden max-sm:hidden text-white flex items-center space-x-6 justify-between pl-6"
+      >
+        <img src="/assets/shared/logo.svg" alt="" />
+        <nav
+          style="font-family: 'Barlow Condensed', sans-serif"
+          class="px-10 bg-backgroundNav backdrop-blur-[15px] backdrop-filter-[5px] grow"
+        >
+          <ul class="flex justify-around font-thin uppercase">
+            <li class="relative py-6">
+              <a href="/index.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                Home
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="/destination.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">01</span> Destination
+              </a>
+            </li>
+            <li class="relative py-6">
+              <a href="crew.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">02</span> Crew
+              </a>
+            </li>
+            <li id="active" class="relative py-6">
+              <a href="technology.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- mobile header -->
+      <header
+        class="sm:hidden text-white flex justify-between items-center p-6"
+      >
+        <img src="/assets/shared/logo.svg" alt="" />
+        <button
+          type="button"
+          class="cursor-pointer"
+          onclick="ShowModal('Modal')"
+        >
+          <img
+            src="/assets/shared/icon-hamburger.svg"
+            width="50"
+            class="p-2"
+            alt=""
+          />
+        </button>
+      </header>
+      <!-- Start mobile screen -->
+      <div id="main-content" class="relative py-6 sm:hidden">
+        <div
+          id="container"
+          class="flex flex-col items-center space-y-9"
+          style="font-family: 'Barlow Condensed', sans-serif"
+        >
+          <div
+            id="page-title"
+            class="flex text-white space-x-6 text-lg tracking-widest uppercase"
+          >
+            <span class="font-bold text-gray-500">03</span>
+            <p class="font-thin">SPACE LAUNCH 101</p>
+          </div>
+          <div id="content" class="flex flex-col items-center space-y-8">
+            <img
+              id="tech-img-mobile"
+              class="w-full"
+              src="/assets/technology/image-launch-vehicle-portrait.jpg"
+              alt=""
+            />
+            <div
+              class="Pagination-Explanation flex flex-col justify-center space-y-10"
+            >
+              <div
+                id="Pagination-numbered-mobile"
+                class="flex justify-center space-x-6 *:not-[.bg-white]:hover:border-white transition-all duration-300"
+              >
+                <!-- <div
+                  class="w-[40px] h-[40px] cursor-pointer bg-white rounded-full text-black text-lg flex justify-center items-center"
+                >
+                  1
+                </div>
+                <div
+                  class="w-[40px] h-[40px] cursor-pointer text-white text-lg font-thin flex justify-center items-center bg-transparent border-[0.2px] border-white rounded-full"
+                >
+                  2
+                </div>
+                <div
+                  class="w-[40px] h-[40px] cursor-pointer text-white text-lg font-thin flex justify-center items-center bg-transparent border-[0.2px] border-white rounded-full"
+                >
+                  3
+                </div> -->
+              </div>
+              <div
+                class="explanation text-white flex flex-col items-center space-y-4"
+              >
+                <div
+                  id="rank-and-name"
+                  class="flex flex-col items-center space-y-2"
+                >
+                  <h2
+                    id="rank-mobile"
+                    style="font-family: 'Bellefair', serif"
+                    class="uppercase text-[18px] text-gray-500"
+                  >
+                    THE TERMINOLOGY…
+                  </h2>
+                  <h1
+                    id="name-mobile"
+                    style="font-family: 'Bellefair', serif"
+                    class="uppercase text-[24px]"
+                  >
+                    douglas hurley
+                  </h1>
+                </div>
+                <p
+                  id="description-mobile"
+                  class="text-center text-[15px] tracking-wide font-thin mb-8"
+                >
+                  A space capsule is an often-crewed spacecraft that uses a
+                  blunt-body reentry capsule to reenter the Earth's atmosphere
+                  without wings. Our capsule is where you'll spend your time
+                  during the flight. It includes a space gym, cinema, and plenty
+                  of other activities to keep you entertained.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal  -->
+        <div
+          id="Modal"
+          style="font-family: 'Barlow Condensed', sans-serif"
+          class="fixed z-40 p-8 flex flex-col items-end space-y-12 backdrop:fill-backgroundNav backdrop-blur-[15px] w-[65%] h-full top-0 -right-1/1"
+        >
+          <button
+            type="button"
+            class="cursor-pointer"
+            onclick="HidModal('Modal')"
+          >
+            <img src="/assets/shared/icon-close.svg" width="25" alt="" />
+          </button>
+          <ul class="text-white font-thin tracking-wide space-y-3 w-full">
+            <li class="active relative">
+              <a href="/index.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="relative font-semibold">00</span> Home
+              </a>
+            </li>
+            <li class="relative">
+              <a href="/destination.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">01</span> Destination
+              </a>
+            </li>
+            <li class="relative">
+              <a href="crew.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">02</span> Crew
+              </a>
+            </li>
+            <li class="relative">
+              <a href="technology.html">
+                <div
+                  class="absolute h-[1.5px] w-full bg-white bottom-0 left-0"
+                ></div>
+                <span class="font-semibold">03</span> Technology
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          id="overlay"
+          class="absolute z-20 bg-destination-page w-full h-full top-0 left-0 hidden"
+        ></div>
+      </div>
+      <!-- End mobile screen -->
+      <!-- Start Table screen -->
+      <div id="main-content" class="py-6 max-sm:hidden lg:hidden">
+        <div
+          id="container"
+          class="flex flex-col items-center space-y-6 py-6"
+          style="font-family: 'Barlow Condensed', sans-serif"
+        >
+          <div
+            id="page-title"
+            class="flex text-white space-x-6 text-lg tracking-widest uppercase"
+          >
+            <span class="font-bold text-gray-500">03</span>
+            <p class="font-thin">SPACE LAUNCH 101</p>
+          </div>
+          <div id="content" class="flex flex-col items-center space-y-8">
+            <img
+              id="tech-img-table"
+              class="w-full h-[350px]"
+              src="/assets/technology/image-launch-vehicle-portrait.jpg"
+              alt=""
+            />
+            <div
+              class="Pagination-Explanation flex flex-col justify-center space-y-10"
+            >
+              <div
+                id="Pagination-numbered-table"
+                class="flex justify-center space-x-6 *:not-[.bg-white]:hover:border-white transition-all duration-300"
+              >
+                <!-- <div
+                  class="w-[40px] h-[40px] cursor-pointer bg-white rounded-full border-[.5px] text-black text-lg flex justify-center items-center"
+                >
+                  1
+                </div>
+                <div
+                  class="w-[40px] h-[40px] cursor-pointer text-white text-lg font-thin flex justify-center items-center bg-transparent border-[0.5px] border-white rounded-full"
+                >
+                  2
+                </div>
+                <div
+                  class="w-[40px] h-[40px] cursor-pointer text-white text-lg font-thin flex justify-center items-center bg-transparent border-[0.5px] border-white rounded-full"
+                >
+                  3
+                </div> -->
+              </div>
+              <div
+                class="explanation text-white flex flex-col items-center space-y-4"
+              >
+                <div
+                  id="rank-and-name"
+                  class="flex flex-col items-center space-y-2"
+                >
+                  <h2
+                    id="rank-table"
+                    style="font-family: 'Bellefair', serif"
+                    class="uppercase text-[18px] text-gray-500"
+                  >
+                    THE TERMINOLOGY…
+                  </h2>
+                  <h1
+                    id="name-table"
+                    style="font-family: 'Bellefair', serif"
+                    class="uppercase text-[24px]"
+                  >
+                    douglas hurley
+                  </h1>
+                </div>
+                <p
+                  id="description-table"
+                  class="text-center text-lg font-thin tracking-wider mb-8"
+                >
+                  A space capsule is an often-crewed spacecraft that uses a
+                  blunt-body reentry capsule to reenter the Earth's atmosphere
+                  without wings. Our capsule is where you'll spend your time
+                  during the flight. It includes a space gym, cinema, and plenty
+                  of other activities to keep you entertained.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Table screen -->
+      <!-- Start desktop screen -->
+      <div id="main-content" class="py-6 px-44 max-lg:hidden mt-5">
+        <div
+          id="container"
+          class="flex flex-col items-center space-y-6 py-6"
+          style="font-family: 'Barlow Condensed', sans-serif"
+        >
+          <div
+            id="page-title"
+            class="flex text-white w-full space-x-6 text-lg tracking-widest uppercase"
+          >
+            <span class="font-bold text-gray-500">03</span>
+            <p class="font-thin">SPACE LAUNCH 101</p>
+          </div>
+          <div id="content" class="flex flex-row-reverse items-center gap-x-20">
+            <img
+              id="tech-img"
+              class="w-full -mr-20"
+              src="/assets/technology/image-launch-vehicle-portrait.jpg"
+              alt=""
+            />
+            <div
+              class="Pagination-Explanation flex justify-start items-center space-x-10"
+            >
+              <div
+                id="Pagination-numbered-desktop"
+                class="flex flex-col justify-center content-between *:not-[.bg-white]:hover:border-white transition-all duration-300"
+              >
+                <!-- <div
+                  class="w-[80px] h-[80px] cursor-pointer bg-white rounded-full text-black text-3xl flex justify-center items-center"
+                >
+                  1
+                </div>
+                <div
+                  class="w-[80px] h-[80px] cursor-pointer text-white text-3xl font-thin flex justify-center items-center bg-transparent border-[0.2px] border-white rounded-full"
+                >
+                  2
+                </div>
+                <div
+                  class="w-[80px] h-[80px] cursor-pointer text-white text-3xl font-thin flex justify-center items-center bg-transparent border-[0.2px] border-white rounded-full"
+                >
+                  3
+                </div> -->
+              </div>
+              <div
+                class="explanation text-white flex flex-col items-start justify-center space-y-6"
+              >
+                <div
+                  id="rank-and-name"
+                  class="flex flex-col items-start space-y-4"
+                >
+                  <h2
+                    id="rank"
+                    style="font-family: 'Bellefair', serif"
+                    class="uppercase text-[32px] text-gray-500"
+                  >
+                    THE TERMINOLOGY…
+                  </h2>
+                  <h1
+                    id="name"
+                    style="font-family: 'Bellefair', serif"
+                    class="uppercase text-[58px]"
+                  >
+                    SPACE CAPSULE
+                  </h1>
+                </div>
+                <p
+                  id="description"
+                  class="text-left text-lg tracking-wider font-thin"
+                >
+                  A space capsule is an often-crewed spacecraft that uses a
+                  blunt-body reentry capsule to reenter the Earth's atmosphere
+                  without wings. Our capsule is where you'll spend your time
+                  during the flight. It includes a space gym, cinema, and plenty
+                  of other activities to keep you entertained.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End desktop screen -->
+    </main>
+  </body>
+  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/technology.js"></script>
+</html>

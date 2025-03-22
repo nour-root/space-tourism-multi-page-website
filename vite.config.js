@@ -8,6 +8,7 @@ export default defineConfig({
         main: "index.html",
         destination: "/destination.html",
         cew: "/crew.html",
+        technology: "/technology.html",
       },
     },
   },
