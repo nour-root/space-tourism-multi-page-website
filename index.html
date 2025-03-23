@@ -20,7 +20,7 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body
-    class="relative max-sm:overflow-x-hidden z-10 bg-cover max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat"
+    class="relative max-sm:overflow-x-hidden h-dvh z-10 bg-cover max-sm:bg-[url('/assets/home/background-home-mobile.jpg')] sm:bg-[url('/assets/home/background-home-tablet.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] bg-no-repeat"
   >
     <main>
       <!-- desktop header -->
@@ -138,7 +138,7 @@
       </header>
       <!-- Start mobile screen -->
       <div id="main-content" class="p-6 sm:hidden">
-        <div id="Hero" class="flex flex-col items-center">
+        <div id="Hero" class="flex flex-col items-center space-y-20">
           <div id="Texts" class="text-white text-center space-y-6">
             <span
               style="font-family: 'Barlow Condensed', sans-serif"
@@ -162,7 +162,7 @@
               this world experience!
             </p>
           </div>
-          <div class="mt-[120px]">
+          <div class="">
             <button
               id="btn"
               style="font-family: 'Bellefair', serif"
@@ -175,7 +175,7 @@
         <div
           id="Modal"
           style="font-family: 'Barlow Condensed', sans-serif"
-          class="fixed z-40 p-8 transform flex flex-col items-end space-y-12 backdrop:fill-backgroundNav backdrop-blur-[20px] w-[270px] h-full top-0 -right-1/1"
+          class="fixed z-40 p-8 transform flex flex-col items-end space-y-12 backdrop:fill-backgroundNav backdrop-blur-[20px] w-[270px] h-1/1 top-0 -right-1/1"
         >
           <button
             type="button"
@@ -219,10 +219,6 @@
             </li>
           </ul>
         </div>
-        <div
-          id="overlay"
-          class="absolute z-20 bg-backgroundHome w-full h-full top-0 left-0 hidden"
-        ></div>
       </div>
       <!-- End mobile screen -->
       <!-- Start Table screen -->
