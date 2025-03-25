@@ -211,7 +211,9 @@ const main = () => {
     tap_menu_table.addEventListener("click", (e) => {
       handlePaginationClick(e);
     });
-    tap_menu_mobile.addEventListener("click", (e) => handlePaginationClick(e));
+    tap_menu_mobile.addEventListener("touchend", (e) =>
+      handlePaginationClick(e)
+    );
   });
 };
 main();
