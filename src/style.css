@@ -46,7 +46,7 @@
 }
 .img-animate {
     animation-name: img-show;
-    animation-duration: 1.2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 }
