@@ -43,6 +43,17 @@ let showDetails = (item) => {
   description_mobile.innerText = `${item.description}`;
   distance_mobile.innerText = `${item.distance}`;
   travel_time_mobile.innerText = `${item.travel}`;
+  plant_name_mobile.style.animation = "none";
+  description_mobile.style.animation = "none";
+  statistics_mobile.style.animation = "none";
+  requestAnimationFrame(function () {
+    statistics_mobile.style.animation =
+      "showContent .7s .5s ease-in-out 1 forwards";
+    plant_name_mobile.style.animation =
+      "showContent .7s .2s ease-in-out 1 forwards";
+    description_mobile.style.animation =
+      " showContent .7s .4s ease-in-out 1 forwards";
+  });
 
   time_animated(item);
 };
@@ -116,18 +127,6 @@ let time_animated = (item) => {
     plant_name_table.style.animation =
       "showContent .7s .2s ease-in-out 1 forwards";
     description_table.style.animation =
-      " showContent .7s .4s ease-in-out 1 forwards";
-  });
-
-  plant_name_mobile.style.animation = "none";
-  description_mobile.style.animation = "none";
-  statistics_mobile.style.animation = "none";
-  requestAnimationFrame(function () {
-    statistics_mobile.style.animation =
-      "showContent .7s .5s ease-in-out 1 forwards";
-    plant_name_mobile.style.animation =
-      "showContent .7s .2s ease-in-out 1 forwards";
-    description_mobile.style.animation =
       " showContent .7s .4s ease-in-out 1 forwards";
   });
 };
@@ -211,9 +210,7 @@ const main = () => {
     tap_menu_table.addEventListener("click", (e) => {
       handlePaginationClick(e);
     });
-    tap_menu_mobile.addEventListener("touchend", (e) =>
-      handlePaginationClick(e)
-    );
+    tap_menu_mobile.addEventListener("click", (e) => handlePaginationClick(e));
   });
 };
 main();
