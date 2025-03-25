@@ -28,5 +28,59 @@
     .Active div{
         width: 100%;
     }
+    #description-mobile{
+        transform: translateX(20px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    #plant-name-mobile{
+        transform: translateX(-20px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    #statistics-mobile{
+        transform: translateX(-20px);
+        filter: blur(5px);
+        opacity: 0;
+    }
 }
-
+.img-animate {
+    animation-name: img-show;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes img-show {
+    0%{
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1) rotate(10deg);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+#statistics,#statistics-table,#plant-name,
+#description,#plant-name-table,#description-table{
+    transform: translateY(20px);
+    filter: blur(4px);
+    opacity: 0;
+    animation: showContent .5s .2s ease-in-out 1 forwards;
+}
+#description,#description-tabl{
+    animation-delay: .4s;
+}
+#statistics,#statistics-table{
+    animation-delay: .5s;
+}

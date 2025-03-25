@@ -1,133 +1,218 @@
+import images_items from "./components/images";
 import taps_menu from "./components/taps_menu";
 import getDataDestination from "./service/getData.service";
+import images_items_table from "./components/images_table";
+import images_items_mobile from "./components/images_mobile";
 const tap_menu = document.getElementById("taps-Menu");
 let plant_name = document.getElementById("plant-name");
 let description = document.getElementById("description");
 let distance = document.getElementById("distance");
 let travel_time = document.getElementById("travel-time");
-let plant_img = document.getElementById("plant-img");
+let content_image = document.querySelector(".image");
 //
 const tap_menu_table = document.getElementById("taps-Menu-table");
 let plant_name_table = document.getElementById("plant-name-table");
 let description_table = document.getElementById("description-table");
 let distance_table = document.getElementById("distance-table");
 let travel_time_table = document.getElementById("travel-time-table");
-let plant_img_table = document.getElementById("plant-img-table");
+let content_image_table = document.querySelector(".image-table");
 //
-let plant_img_mobile = document.getElementById("plant-img-mobile");
 let plant_name_mobile = document.getElementById("plant-name-mobile");
 const tap_menu_mobile = document.getElementById("taps-Menu-mobile");
 let description_mobile = document.getElementById("description-mobile");
 let distance_mobile = document.getElementById("distance-mobile");
 let travel_time_mobile = document.getElementById("travel-time-mobile");
-let showDetails = () => {
-  tap_menu.addEventListener("click", (e) => {
-    let value = e.target.ariaValueText;
-    getDataDestination().then(async (res) => {
-      const data = await res.json();
-      data["destinations"].forEach((x) => {
-        if (x.name === value) {
-          tap_menu.innerHTML = data["destinations"]
-            .map((x) => {
-              return taps_menu(x, value);
-            })
-            .join("");
-          plant_name.innerHTML = `${x.name}`;
-          description.innerText = `${x.description}`;
-          distance.innerText = `${x.distance}`;
-          travel_time.innerText = `${x.travel}`;
-          plant_img.src = `${x.images.png}`;
-        }
-      });
+let content_image_mobile = document.querySelector(".image-mobile");
+//
+let statistics = document.getElementById("statistics");
+let statistics_table = document.getElementById("statistics-table");
+let statistics_mobile = document.getElementById("statistics-mobile");
+//
+let showDetails = (item) => {
+  plant_name.innerHTML = `${item.name}`;
+  description.innerText = `${item.description}`;
+  distance.innerText = `${item.distance}`;
+  travel_time.innerText = `${item.travel}`;
+  //
+  plant_name_table.innerHTML = `${item.name}`;
+  description_table.innerText = `${item.description}`;
+  distance_table.innerText = `${item.distance}`;
+  travel_time_table.innerText = `${item.travel}`;
+  //
+  plant_name_mobile.innerHTML = `${item.name}`;
+  description_mobile.innerText = `${item.description}`;
+  distance_mobile.innerText = `${item.distance}`;
+  travel_time_mobile.innerText = `${item.travel}`;
+
+  time_animated(item);
+};
+let time_animated = (item) => {
+  getDataDestination().then(async (res) => {
+    const data = await res.json();
+    let all_images = data.destinations.filter((x) => x.name !== item.name);
+    let current_selector = data.destinations.filter(
+      (x) => x.name === item.name
+    );
+
+    all_images.forEach((img) => {
+      if ((item.images.png = `${img.images.png}`)) {
+        document
+          .getElementById(`img-${img.name}`)
+          .classList.add("hidden", "scale-0");
+        document.getElementById(`img-${img.name}`).classList.add("img-animate");
+        //
+        document
+          .getElementById(`img-${img.name}-table`)
+          .classList.add("hidden", "scale-0");
+        document
+          .getElementById(`img-${img.name}-table`)
+          .classList.add("img-animate");
+        //
+        document
+          .getElementById(`img-${img.name}-mobile`)
+          .classList.add("hidden", "scale-0");
+        document
+          .getElementById(`img-${img.name}-mobile`)
+          .classList.add("img-animate");
+      }
     });
+
+    if ((item.images.png = `${current_selector[0].images.png}`)) {
+      document
+        .getElementById(`img-${item.name}`)
+        .classList.remove("hidden", "scale-0");
+      document.getElementById(`img-${item.name}`).classList.add("img-animate");
+      //
+      document
+        .getElementById(`img-${item.name}-table`)
+        .classList.remove("hidden", "scale-0");
+      document
+        .getElementById(`img-${item.name}-table`)
+        .classList.add("img-animate");
+      //
+      document
+        .getElementById(`img-${item.name}-mobile`)
+        .classList.remove("hidden", "scale-0");
+      document
+        .getElementById(`img-${item.name}-mobile`)
+        .classList.add("img-animate");
+    }
+  });
+  plant_name.style.animation = "none";
+  description.style.animation = "none";
+  statistics.style.animation = "none";
+  requestAnimationFrame(function () {
+    statistics.style.animation = "showContent .5s .5s ease-in-out 1 forwards";
+    plant_name.style.animation = "showContent .5s .2s ease-in-out 1 forwards";
+    description.style.animation = " showContent .5s .4s ease-in-out 1 forwards";
+  });
+
+  plant_name_table.style.animation = "none";
+  description_table.style.animation = "none";
+  statistics_table.style.animation = "none";
+  requestAnimationFrame(function () {
+    statistics_table.style.animation =
+      "showContent .5s .5s ease-in-out 1 forwards";
+    plant_name_table.style.animation =
+      "showContent .5s .2s ease-in-out 1 forwards";
+    description_table.style.animation =
+      " showContent .5s .4s ease-in-out 1 forwards";
+  });
+
+  plant_name_mobile.style.animation = "none";
+  description_mobile.style.animation = "none";
+  statistics_mobile.style.animation = "none";
+  requestAnimationFrame(function () {
+    statistics_mobile.style.animation =
+      "showContent .5s .5s ease-in-out 1 forwards";
+    plant_name_mobile.style.animation =
+      "showContent .5s .2s ease-in-out 1 forwards";
+    description_mobile.style.animation =
+      " showContent .5s .4s ease-in-out 1 forwards";
   });
 };
-let showDetails_table = () => {
-  tap_menu_table.addEventListener("click", (e) => {
-    let value = e.target.ariaValueText;
-    getDataDestination().then(async (res) => {
-      const data = await res.json();
-      data["destinations"].forEach((x) => {
-        if (x.name === value) {
-          tap_menu_table.innerHTML = data["destinations"]
-            .map((x) => {
-              return taps_menu(x, value);
-            })
-            .join("");
-          plant_name_table.innerHTML = `${x.name}`;
-          description_table.innerText = `${x.description}`;
-          distance_table.innerText = `${x.distance}`;
-          travel_time_table.innerText = `${x.travel}`;
-          plant_img_table.src = `${x.images.png}`;
-        }
-      });
-    });
+const handlePaginationClick = (e) => {
+  if (!e.target.id) return;
+  let selectedName = e.target.getAttribute("id");
+  // Get data and update content
+  getDataDestination().then(async (res) => {
+    const data = await res.json();
+    const selectedItem = data.destinations.find((x) => x.name === selectedName);
+    if (selectedItem) {
+      showDetails(selectedItem);
+      syncPaginationStyles(selectedName);
+    }
   });
 };
-let showDetails_mobile = () => {
-  tap_menu_mobile.addEventListener("click", (e) => {
-    let value = e.target.ariaValueText;
-    getDataDestination().then(async (res) => {
-      const data = await res.json();
-      data["destinations"].forEach((x) => {
-        if (x.name === value) {
-          tap_menu_mobile.innerHTML = data["destinations"]
-            .map((x) => {
-              return taps_menu(x, value);
-            })
-            .join("");
-          plant_name_mobile.innerHTML = `${x.name}`;
-          description_mobile.innerText = `${x.description}`;
-          distance_mobile.innerText = `${x.distance}`;
-          travel_time_mobile.innerText = `${x.travel}`;
-          plant_img_mobile.src = `${x.images.png}`;
-        }
-      });
-    });
+const syncPaginationStyles = (selectedName) => {
+  let alltaps = [
+    ...tap_menu.children,
+    ...tap_menu_table.children,
+    ...tap_menu_mobile.children,
+  ];
+  alltaps.forEach((tap) => {
+    tap.classList.remove("Active");
   });
+  //
+  alltaps
+    .filter((tap) => tap.id === selectedName)
+    .forEach((tap) => {
+      tap.classList.add("Active");
+    });
+  //
 };
+//
 const main = () => {
   getDataDestination().then(async (res) => {
     const data = await res.json();
-    data["destinations"].forEach((x) => {
-      if (x.name === "Moon") {
-        tap_menu.innerHTML = data["destinations"]
-          .map((x) => {
-            return taps_menu(x, "Moon");
-          })
-          .join("");
-        plant_name.innerHTML = `${x.name}`;
-        description.innerText = `${x.description}`;
-        distance.innerText = `${x.distance}`;
-        travel_time.innerText = `${x.travel}`;
-        plant_img.src = `${x.images.webp}`;
-        //
-        tap_menu_table.innerHTML = data["destinations"]
-          .map((x) => {
-            return taps_menu(x, "Moon");
-          })
-          .join("");
-        plant_name_table.innerHTML = `${x.name}`;
-        description_table.innerText = `${x.description}`;
-        distance_table.innerText = `${x.distance}`;
-        travel_time_table.innerText = `${x.travel}`;
-        plant_img_table.src = `${x.images.png}`;
-        //
-        tap_menu_mobile.innerHTML = data["destinations"]
-          .map((x) => {
-            return taps_menu(x, "Moon");
-          })
-          .join("");
-        plant_name_mobile.innerHTML = `${x.name}`;
-        description_mobile.innerText = `${x.description}`;
-        distance_mobile.innerText = `${x.distance}`;
-        travel_time_mobile.innerText = `${x.travel}`;
-        plant_img_mobile.src = `${x.images.webp}`;
-      }
+    content_image.innerHTML = data.destinations
+      .map((img) => {
+        return images_items(img);
+      })
+      .join("");
+    content_image_table.innerHTML = data.destinations
+      .map((img) => {
+        return images_items_table(img);
+      })
+      .join("");
+    content_image_mobile.innerHTML = data.destinations
+      .map((img) => {
+        return images_items_mobile(img);
+      })
+      .join("");
+
+    tap_menu.innerHTML = data["destinations"]
+      .map((x) => {
+        return taps_menu(x);
+      })
+      .join("");
+
+    tap_menu_table.innerHTML = data["destinations"]
+      .map((x) => {
+        return taps_menu(x);
+      })
+      .join("");
+
+    tap_menu_mobile.innerHTML = data["destinations"]
+      .map((x) => {
+        return taps_menu(x);
+      })
+      .join("");
+
+    //
+    const currentItem = data.destinations.find((x) => x.name === "Moon");
+    if (currentItem) {
+      showDetails(currentItem);
+      syncPaginationStyles(currentItem.name);
+    }
+    tap_menu.addEventListener("click", (e) => {
+      handlePaginationClick(e);
     });
+    tap_menu_table.addEventListener("click", (e) => {
+      handlePaginationClick(e);
+    });
+    tap_menu_mobile.addEventListener("click", (e) => handlePaginationClick(e));
   });
 };
 main();
 showDetails();
-showDetails_table();
-showDetails_mobile();
