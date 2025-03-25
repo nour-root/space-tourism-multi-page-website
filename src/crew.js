@@ -2,17 +2,17 @@ import Pagination from "./components/Pagination";
 import getDataDestination from "./service/getData.service";
 const rank_mobile = document.getElementById("rank-mobile");
 const name_mobile = document.getElementById("name-mobile");
-const description_mobile = document.getElementById("description-mobile");
+const description_mobile = document.getElementById("description-crew-mobile");
 const crew_img_mobile = document.getElementById("crew-img-mobile");
 //
 const rank_table = document.getElementById("rank-table");
 const name_table = document.getElementById("name-table");
-const description_table = document.getElementById("description-table");
+const description_table = document.getElementById("description-crew-table");
 const crew_img_table = document.getElementById("crew-img-table");
 //
 const rank = document.getElementById("rank");
 const name = document.getElementById("name");
-const description = document.getElementById("description");
+const description = document.getElementById("description-crew");
 const crew_img = document.getElementById("crew-img");
 //
 let Pagination_desktop = document.getElementById("Pagination-desktop");

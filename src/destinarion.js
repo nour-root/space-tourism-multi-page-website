@@ -102,9 +102,9 @@ let time_animated = (item) => {
   description.style.animation = "none";
   statistics.style.animation = "none";
   requestAnimationFrame(function () {
-    statistics.style.animation = "showContent .5s .5s ease-in-out 1 forwards";
-    plant_name.style.animation = "showContent .5s .2s ease-in-out 1 forwards";
-    description.style.animation = " showContent .5s .4s ease-in-out 1 forwards";
+    statistics.style.animation = "showContent .7s .5s ease-in-out 1 forwards";
+    plant_name.style.animation = "showContent .7s .2s ease-in-out 1 forwards";
+    description.style.animation = " showContent .7s .4s ease-in-out 1 forwards";
   });
 
   plant_name_table.style.animation = "none";
@@ -112,11 +112,11 @@ let time_animated = (item) => {
   statistics_table.style.animation = "none";
   requestAnimationFrame(function () {
     statistics_table.style.animation =
-      "showContent .5s .5s ease-in-out 1 forwards";
+      "showContent .7s .5s ease-in-out 1 forwards";
     plant_name_table.style.animation =
-      "showContent .5s .2s ease-in-out 1 forwards";
+      "showContent .7s .2s ease-in-out 1 forwards";
     description_table.style.animation =
-      " showContent .5s .4s ease-in-out 1 forwards";
+      " showContent .7s .4s ease-in-out 1 forwards";
   });
 
   plant_name_mobile.style.animation = "none";
@@ -124,11 +124,11 @@ let time_animated = (item) => {
   statistics_mobile.style.animation = "none";
   requestAnimationFrame(function () {
     statistics_mobile.style.animation =
-      "showContent .5s .5s ease-in-out 1 forwards";
+      "showContent .7s .5s ease-in-out 1 forwards";
     plant_name_mobile.style.animation =
-      "showContent .5s .2s ease-in-out 1 forwards";
+      "showContent .7s .2s ease-in-out 1 forwards";
     description_mobile.style.animation =
-      " showContent .5s .4s ease-in-out 1 forwards";
+      " showContent .7s .4s ease-in-out 1 forwards";
   });
 };
 const handlePaginationClick = (e) => {
