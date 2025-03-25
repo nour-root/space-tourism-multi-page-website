@@ -28,21 +28,21 @@
     .Active div{
         width: 100%;
     }
-    #description-mobile{
-        transform: translateX(20px);
-        filter: blur(5px);
-        opacity: 0;
-    }
-    #plant-name-mobile{
-        transform: translateX(-20px);
-        filter: blur(5px);
-        opacity: 0;
-    }
-    #statistics-mobile{
-        transform: translateX(-20px);
-        filter: blur(5px);
-        opacity: 0;
-    }
+}
+#description-mobile{
+    transform: translateX(20px);
+    filter: blur(5px);
+    opacity: 0;
+}
+#plant-name-mobile{
+    transform: translateX(-20px);
+    filter: blur(5px);
+    opacity: 0;
+}
+#statistics-mobile{
+    transform: translateX(-20px);
+    filter: blur(5px);
+    opacity: 0;
 }
 .img-animate {
     animation-name: img-show;
