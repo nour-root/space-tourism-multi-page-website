@@ -112,32 +112,67 @@ let text_animation = () => {
   plant_name.style.animation = "none";
   description.style.animation = "none";
   statistics.style.animation = "none";
-
   plant_name_table.style.animation = "none";
   description_table.style.animation = "none";
   statistics_table.style.animation = "none";
-
-  plant_name_mobile.style.animation = "none";
-  description_mobile.style.animation = "none";
-  statistics_mobile.style.animation = "none";
+  // plant_name_mobile.style.animation = "none";
+  // description_mobile.style.animation = "none";
+  // statistics_mobile.style.animation = "none";
   requestAnimationFrame(function () {
     statistics.style.animation = "showContent .5s .4s ease-in-out 1 forwards";
     plant_name.style.animation = "showContent .5s .2s ease-in-out 1 forwards";
     description.style.animation = " showContent .5s .3s ease-in-out 1 forwards";
-
     statistics_table.style.animation =
       "showContent .5s .4s ease-in-out 1 forwards";
     plant_name_table.style.animation =
       "showContent .5s .2s ease-in-out 1 forwards";
     description_table.style.animation =
       " showContent .5s .3s ease-in-out 1 forwards";
-
-    statistics_mobile.style.animation =
-      "showContent .5s .4s ease-in-out 1 forwards";
-    plant_name_mobile.style.animation =
-      "showContent .5s .4s ease-in-out 1 forwards";
-    description_mobile.style.animation =
-      "showContent .5s .4s ease-in-out 1 forwards";
+    // statistics_mobile.style.animation =
+    //   "showContent .5s .4s ease-in-out 1 forwards";
+    // plant_name_mobile.style.animation =
+    //   "showContent .5s .4s ease-in-out 1 forwards";
+    // description_mobile.style.animation =
+    //   "showContent .5s .4s ease-in-out 1 forwards";
+  });
+  gsap.set(description_mobile, {
+    opacity: 0,
+    filter: "blur(10px)",
+    x: 10,
+  });
+  gsap.set(statistics_mobile, {
+    opacity: 0,
+    filter: "blur(10px)",
+    x: -10,
+  });
+  gsap.set(plant_name_mobile, {
+    opacity: 0,
+    filter: "blur(10px)",
+    y: -10,
+  });
+  gsap.to(plant_name_mobile, {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.2,
+    ease: "power2.out",
+  });
+  gsap.to(description_mobile, {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.3,
+    ease: "power2.out",
+  });
+  gsap.to(statistics_mobile, {
+    opacity: 1,
+    x: 0,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.4,
+    ease: "power2.out",
   });
 };
 const handlePaginationClick = (e) => {

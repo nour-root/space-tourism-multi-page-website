@@ -29,7 +29,7 @@
         width: 100%;
     }
 }
-#description-mobile{
+/* #description-mobile{
     transform: translateX(20px);
     filter: blur(4px);
     opacity: 0;
@@ -43,7 +43,7 @@
     transform: translateX(-20px);
     filter: blur(4px);
     opacity: 0;
-}
+} */
 /* #description-mobile,#plant-name-mobile,#statistics-mobile{
     animation: showContent .5s .3s ease-in-out 1 forwards;
 } */
