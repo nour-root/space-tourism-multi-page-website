@@ -56,48 +56,57 @@ let time_animated = (item) => {
 
     all_images.forEach((img) => {
       if ((item.images.png = `${img.images.png}`)) {
-        document
-          .getElementById(`img-${img.name}`)
-          .classList.add("hidden", "scale-0");
-        document.getElementById(`img-${img.name}`).classList.add("img-animate");
-        //
-        document
-          .getElementById(`img-${img.name}-table`)
-          .classList.add("hidden", "scale-0");
-        document
-          .getElementById(`img-${img.name}-table`)
-          .classList.add("img-animate");
-        //
-        document
-          .getElementById(`img-${img.name}-mobile`)
-          .classList.add("hidden", "scale-0");
-        document
-          .getElementById(`img-${img.name}-mobile`)
-          .classList.add("img-animate");
+        setTimeout(() => {
+          document
+            .getElementById(`img-${img.name}`)
+            .classList.add("hidden", "scale-0");
+          document
+            .getElementById(`img-${img.name}`)
+            .classList.add("img-animate");
+          //
+          document
+            .getElementById(`img-${img.name}-table`)
+            .classList.add("hidden", "scale-0");
+          document
+            .getElementById(`img-${img.name}-table`)
+            .classList.add("img-animate");
+          //
+          document
+            .getElementById(`img-${img.name}-mobile`)
+            .classList.add("hidden", "scale-0");
+          document
+            .getElementById(`img-${img.name}-mobile`)
+            .classList.add("img-animate");
+        }, 0);
       }
     });
 
     if ((item.images.png = `${current_selector[0].images.png}`)) {
-      document
-        .getElementById(`img-${item.name}`)
-        .classList.remove("hidden", "scale-0");
-      document.getElementById(`img-${item.name}`).classList.add("img-animate");
-      //
-      document
-        .getElementById(`img-${item.name}-table`)
-        .classList.remove("hidden", "scale-0");
-      document
-        .getElementById(`img-${item.name}-table`)
-        .classList.add("img-animate");
-      //
-      document
-        .getElementById(`img-${item.name}-mobile`)
-        .classList.remove("hidden", "scale-0");
-      document
-        .getElementById(`img-${item.name}-mobile`)
-        .classList.add("img-animate");
+      setTimeout(() => {
+        document
+          .getElementById(`img-${item.name}`)
+          .classList.remove("hidden", "scale-0");
+        document
+          .getElementById(`img-${item.name}`)
+          .classList.add("img-animate");
+        //
+        document
+          .getElementById(`img-${item.name}-table`)
+          .classList.remove("hidden", "scale-0");
+        document
+          .getElementById(`img-${item.name}-table`)
+          .classList.add("img-animate");
+        //
+        document
+          .getElementById(`img-${item.name}-mobile`)
+          .classList.remove("hidden", "scale-0");
+        document
+          .getElementById(`img-${item.name}-mobile`)
+          .classList.add("img-animate");
+      }, 0);
     }
   });
+
   plant_name.style.animation = "none";
   description.style.animation = "none";
   statistics.style.animation = "none";
@@ -124,11 +133,11 @@ let time_animated = (item) => {
   statistics_mobile.style.animation = "none";
   requestAnimationFrame(function () {
     statistics_mobile.style.animation =
-      "showContent .7s .5s ease-in-out 1 forwards";
+      "showContent .5s .3s ease-in-out 1 forwards";
     plant_name_mobile.style.animation =
-      "showContent .7s .2s ease-in-out 1 forwards";
+      "showContent .5s .4s ease-in-out 1 forwards";
     description_mobile.style.animation =
-      " showContent .7s .4s ease-in-out 1 forwards";
+      " showContent .5s .5s ease-in-out 1 forwards";
   });
 };
 const handlePaginationClick = (e) => {
@@ -211,9 +220,7 @@ const main = () => {
     tap_menu_table.addEventListener("click", (e) => {
       handlePaginationClick(e);
     });
-    tap_menu_mobile.addEventListener("touchend", (e) =>
-      handlePaginationClick(e)
-    );
+    tap_menu_mobile.addEventListener("click", (e) => handlePaginationClick(e));
   });
 };
 main();

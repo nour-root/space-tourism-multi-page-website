@@ -31,17 +31,17 @@
 }
 #description-mobile{
     transform: translateX(20px);
-    filter: blur(5px);
+    filter: blur(4px);
     opacity: 0;
 }
 #plant-name-mobile{
-    transform: translateX(-20px);
-    filter: blur(5px);
+    transform: translateY(-20px);
+    filter: blur(4px);
     opacity: 0;
 }
 #statistics-mobile{
     transform: translateX(-20px);
-    filter: blur(5px);
+    filter: blur(4px);
     opacity: 0;
 }
 .img-animate {
@@ -65,6 +65,17 @@
     }
 }
 @keyframes showContent {
+    form{
+        #statistics-mobile,#plant-name-mobile{
+            transform: translateX(-20px);
+        }
+        #description-mobile{
+            transform: translateX(20px);
+        }
+        transform: translateY(20px);
+        filter: blur(4px);
+        opacity: 0;
+    }
     to{
         transform: translateY(0);
         filter: blur(0);
@@ -76,7 +87,7 @@
     transform: translateY(20px);
     filter: blur(4px);
     opacity: 0;
-    animation: showContent .5s .2s ease-in-out 1 forwards;
+    animation: showContent .5s .3s ease-in-out 1 forwards;
 }
 #description,#description-tabl{
     animation-delay: .4s;
