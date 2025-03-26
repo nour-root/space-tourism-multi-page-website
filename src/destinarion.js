@@ -45,6 +45,7 @@ let showDetails = (item) => {
   travel_time_mobile.innerText = `${item.travel}`;
 
   time_animated(item);
+  text_animation();
 };
 let time_animated = (item) => {
   getDataDestination().then(async (res) => {
@@ -106,39 +107,38 @@ let time_animated = (item) => {
       }, 0);
     }
   });
-
+};
+let text_animation = () => {
   plant_name.style.animation = "none";
   description.style.animation = "none";
   statistics.style.animation = "none";
-  requestAnimationFrame(function () {
-    statistics.style.animation = "showContent .7s .5s ease-in-out 1 forwards";
-    plant_name.style.animation = "showContent .7s .2s ease-in-out 1 forwards";
-    description.style.animation = " showContent .7s .4s ease-in-out 1 forwards";
-  });
 
   plant_name_table.style.animation = "none";
   description_table.style.animation = "none";
   statistics_table.style.animation = "none";
-  requestAnimationFrame(function () {
-    statistics_table.style.animation =
-      "showContent .7s .5s ease-in-out 1 forwards";
-    plant_name_table.style.animation =
-      "showContent .7s .2s ease-in-out 1 forwards";
-    description_table.style.animation =
-      " showContent .7s .4s ease-in-out 1 forwards";
-  });
 
   plant_name_mobile.style.animation = "none";
   description_mobile.style.animation = "none";
   statistics_mobile.style.animation = "none";
-  setTimeout(() => {
+  requestAnimationFrame(function () {
+    statistics.style.animation = "showContent .5s .4s ease-in-out 1 forwards";
+    plant_name.style.animation = "showContent .5s .2s ease-in-out 1 forwards";
+    description.style.animation = " showContent .5s .3s ease-in-out 1 forwards";
+
+    statistics_table.style.animation =
+      "showContent .5s .4s ease-in-out 1 forwards";
+    plant_name_table.style.animation =
+      "showContent .5s .2s ease-in-out 1 forwards";
+    description_table.style.animation =
+      " showContent .5s .3s ease-in-out 1 forwards";
+
     statistics_mobile.style.animation =
-      "showContent .5s .3s ease-in-out 1 forwards";
+      "showContent .5s .4s ease-in-out 1 forwards";
     plant_name_mobile.style.animation =
       "showContent .5s .4s ease-in-out 1 forwards";
     description_mobile.style.animation =
-      " showContent .5s .5s ease-in-out 1 forwards";
-  }, 0);
+      "showContent .5s .4s ease-in-out 1 forwards";
+  });
 };
 const handlePaginationClick = (e) => {
   if (!e.target.id) return;
@@ -150,6 +150,7 @@ const handlePaginationClick = (e) => {
     if (selectedItem) {
       showDetails(selectedItem);
       syncPaginationStyles(selectedName);
+      text_animation();
     }
   });
 };
@@ -220,7 +221,9 @@ const main = () => {
     tap_menu_table.addEventListener("click", (e) => {
       handlePaginationClick(e);
     });
-    tap_menu_mobile.addEventListener("click", (e) => handlePaginationClick(e));
+    tap_menu_mobile.addEventListener("click", (e) => {
+      handlePaginationClick(e);
+    });
   });
 };
 main();
