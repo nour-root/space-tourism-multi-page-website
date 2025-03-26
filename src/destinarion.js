@@ -3,6 +3,7 @@ import taps_menu from "./components/taps_menu";
 import getDataDestination from "./service/getData.service";
 import images_items_table from "./components/images_table";
 import images_items_mobile from "./components/images_mobile";
+import gsap from "gsap";
 const tap_menu = document.getElementById("taps-Menu");
 let plant_name = document.getElementById("plant-name");
 let description = document.getElementById("description");
