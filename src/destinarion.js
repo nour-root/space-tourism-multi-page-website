@@ -131,14 +131,14 @@ let time_animated = (item) => {
   plant_name_mobile.style.animation = "none";
   description_mobile.style.animation = "none";
   statistics_mobile.style.animation = "none";
-  requestAnimationFrame(function () {
+  setTimeout(() => {
     statistics_mobile.style.animation =
       "showContent .5s .3s ease-in-out 1 forwards";
     plant_name_mobile.style.animation =
       "showContent .5s .4s ease-in-out 1 forwards";
     description_mobile.style.animation =
       " showContent .5s .5s ease-in-out 1 forwards";
-  });
+  }, 0);
 };
 const handlePaginationClick = (e) => {
   if (!e.target.id) return;
