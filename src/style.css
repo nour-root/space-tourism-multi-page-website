@@ -67,25 +67,14 @@
         opacity: 1;
     }
 }
-@keyframes showContent {
-    /* form{
-        #statistics-mobile,#plant-name-mobile{
-            transform: translateX(-20px);
-        }
-        #description-mobile{
-            transform: translateX(20px);
-        }
-        transform: translateY(20px);
-        filter: blur(4px);
-        opacity: 0;
-    } */
+/* @keyframes showContent {
     to{
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
     }
-}
-#statistics,#statistics-table,#plant-name,
+} */
+/* #statistics,#statistics-table,#plant-name,
 #description,#plant-name-table,#description-table{
     transform: translateY(20px);
     filter: blur(4px);
@@ -96,4 +85,4 @@
 }
 #statistics,#statistics-table{
     animation-delay: .4s;
-}
+} */

@@ -57,84 +57,110 @@ let time_animated = (item) => {
 
     all_images.forEach((img) => {
       if ((item.images.png = `${img.images.png}`)) {
-        setTimeout(() => {
-          document
-            .getElementById(`img-${img.name}`)
-            .classList.add("hidden", "scale-0");
-          document
-            .getElementById(`img-${img.name}`)
-            .classList.add("img-animate");
-          //
-          document
-            .getElementById(`img-${img.name}-table`)
-            .classList.add("hidden", "scale-0");
-          document
-            .getElementById(`img-${img.name}-table`)
-            .classList.add("img-animate");
-          //
-          document
-            .getElementById(`img-${img.name}-mobile`)
-            .classList.add("hidden", "scale-0");
-          document
-            .getElementById(`img-${img.name}-mobile`)
-            .classList.add("img-animate");
-        }, 0);
+        document
+          .getElementById(`img-${img.name}`)
+          .classList.add("hidden", "scale-0");
+        document.getElementById(`img-${img.name}`).classList.add("img-animate");
+        //
+        document
+          .getElementById(`img-${img.name}-table`)
+          .classList.add("hidden", "scale-0");
+        document
+          .getElementById(`img-${img.name}-table`)
+          .classList.add("img-animate");
+        //
+        document
+          .getElementById(`img-${img.name}-mobile`)
+          .classList.add("hidden", "scale-0");
+        document
+          .getElementById(`img-${img.name}-mobile`)
+          .classList.add("img-animate");
       }
     });
 
     if ((item.images.png = `${current_selector[0].images.png}`)) {
-      setTimeout(() => {
-        document
-          .getElementById(`img-${item.name}`)
-          .classList.remove("hidden", "scale-0");
-        document
-          .getElementById(`img-${item.name}`)
-          .classList.add("img-animate");
-        //
-        document
-          .getElementById(`img-${item.name}-table`)
-          .classList.remove("hidden", "scale-0");
-        document
-          .getElementById(`img-${item.name}-table`)
-          .classList.add("img-animate");
-        //
-        document
-          .getElementById(`img-${item.name}-mobile`)
-          .classList.remove("hidden", "scale-0");
-        document
-          .getElementById(`img-${item.name}-mobile`)
-          .classList.add("img-animate");
-      }, 0);
+      document
+        .getElementById(`img-${item.name}`)
+        .classList.remove("hidden", "scale-0");
+      document.getElementById(`img-${item.name}`).classList.add("img-animate");
+      //
+      document
+        .getElementById(`img-${item.name}-table`)
+        .classList.remove("hidden", "scale-0");
+      document
+        .getElementById(`img-${item.name}-table`)
+        .classList.add("img-animate");
+      //
+      document
+        .getElementById(`img-${item.name}-mobile`)
+        .classList.remove("hidden", "scale-0");
+      document
+        .getElementById(`img-${item.name}-mobile`)
+        .classList.add("img-animate");
     }
   });
 };
 let text_animation = () => {
-  plant_name.style.animation = "none";
-  description.style.animation = "none";
-  statistics.style.animation = "none";
-  plant_name_table.style.animation = "none";
-  description_table.style.animation = "none";
-  statistics_table.style.animation = "none";
-  // plant_name_mobile.style.animation = "none";
-  // description_mobile.style.animation = "none";
-  // statistics_mobile.style.animation = "none";
-  requestAnimationFrame(function () {
-    statistics.style.animation = "showContent .5s .4s ease-in-out 1 forwards";
-    plant_name.style.animation = "showContent .5s .2s ease-in-out 1 forwards";
-    description.style.animation = " showContent .5s .3s ease-in-out 1 forwards";
-    statistics_table.style.animation =
-      "showContent .5s .4s ease-in-out 1 forwards";
-    plant_name_table.style.animation =
-      "showContent .5s .2s ease-in-out 1 forwards";
-    description_table.style.animation =
-      " showContent .5s .3s ease-in-out 1 forwards";
-    // statistics_mobile.style.animation =
-    //   "showContent .5s .4s ease-in-out 1 forwards";
-    // plant_name_mobile.style.animation =
-    //   "showContent .5s .4s ease-in-out 1 forwards";
-    // description_mobile.style.animation =
-    //   "showContent .5s .4s ease-in-out 1 forwards";
+  gsap.set([description, plant_name, statistics], {
+    opacity: 0,
+    filter: "blur(10px)",
+    y: 10,
   });
+  gsap.to(plant_name, {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.2,
+    ease: "power2.out",
+  });
+  gsap.to(description, {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.3,
+    ease: "power2.out",
+  });
+  gsap.to(statistics, {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.4,
+    ease: "power2.out",
+  });
+
+  gsap.set([description_table, plant_name_table, statistics_table], {
+    opacity: 0,
+    filter: "blur(10px)",
+    y: 10,
+  });
+  gsap.to(plant_name_table, {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.2,
+    ease: "power2.out",
+  });
+  gsap.to(description_table, {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.3,
+    ease: "power2.out",
+  });
+  gsap.to(statistics_table, {
+    y: 0,
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 0.7,
+    delay: 0.4,
+    ease: "power2.out",
+  });
+
   gsap.set(description_mobile, {
     opacity: 0,
     filter: "blur(10px)",
